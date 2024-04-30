@@ -1,0 +1,87 @@
+/* General Chatbox Styles */
+#chatflow_pro_chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 100%; /* Ensures chatbox does not exceed the width of the screen */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    font-family: Arial, sans-serif; /* Use a standard font for compatibility */
+}
+
+/* Chat Messages Container */
+#chatbot_messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual Chat Message */
+#chatbot_messages p {
+    margin: 0 0 10px 0;
+    padding: 5px;
+    background-color: #e7e7e7; /* Slightly different background for visibility */
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 80%; /* Allows some messages to not take the full width */
+}
+
+/* User and Assistant Message Styling */
+#chatbot_messages p.user {
+    background-color: #d8eafd; /* Light blue background for the user */
+    align-self: flex-start;
+}
+
+#chatbot_messages p.assistant {
+    background-color: #f1f1f1; /* Different background for the assistant */
+    align-self: flex-end;
+}
+
+/* Input and Button Styling */
+
+#chatbot_commands {
+    display: flex;
+    flex-direction: row;
+}
+
+#chatbot_input {
+    width: calc(80%); /* Input and button each take half width, minus padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 50px;
+    border-radius: 0 0 0 5px;
+}
+
+#chatbot_commands > button {
+    height: 50px;
+    width: 20%;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 5px 0;
+}
+
+#chatbot_commands > button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensures the input and button are in a row */
+#chatflow_pro_chatbot > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
